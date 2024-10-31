@@ -30,6 +30,7 @@ export default function App() {
 
       {/* Today's Tasks */}
       <View style={styles.tasksWrapper}>
+        <Text> Edited by Gannon</Text>
         <Text style={styles.sectionTitle}>Tasks for today:</Text>
         <View style={styles.items}>
           {/* This is where the user will put their tasks*/}
