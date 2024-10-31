@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Keyboard, ScrollView } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Keyboard, ScrollView, Platform } from 'react-native';
 import Task from './components/Task';
 
 export default function App() {
@@ -30,9 +30,9 @@ export default function App() {
 
       {/* Today's Tasks */}
       <View style={styles.tasksWrapper}>
-        <Text style={styles.sectionTitle}>Today's tasks</Text>
+        <Text style={styles.sectionTitle}>Tasks for today:</Text>
         <View style={styles.items}>
-          {/* This is where the tasks will go! */}
+          {/* This is where the user will put their tasks*/}
           {
             taskItems.map((item, index) => {
               return (
