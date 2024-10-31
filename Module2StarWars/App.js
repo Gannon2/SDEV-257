@@ -24,7 +24,8 @@ const HomeScreen = ({navigation}) => (
 
 
 
-
+// Adds tabs for iOS
+// Adds a drawer for Android
 export default function App() {
   return (
     <NavigationContainer>
