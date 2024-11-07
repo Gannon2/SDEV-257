@@ -5,7 +5,7 @@ import axios from 'axios';
 const PlanetsScreen = ({ navigation }) => {
   const [planets, setPlanets] = useState([]);
   const [loading, setLoading] = useState(true);
-
+// Uses the API instead of a hard-coded flatlist.
   useEffect(() => {
     const fetchPlanets = async () => {
       try {
