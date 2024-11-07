@@ -5,7 +5,7 @@ import axios from 'axios';
 const SpaceshipsScreen = ({ navigation }) => {
   const [spaceships, setSpaceships] = useState([]);
   const [loading, setLoading] = useState(true);
-
+// Uses the API instead of a hard-coded flatlist.
   useEffect(() => {
     const fetchSpaceships = async () => {
       try {
