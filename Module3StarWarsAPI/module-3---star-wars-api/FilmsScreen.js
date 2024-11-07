@@ -5,7 +5,7 @@ import axios from 'axios';
 const FilmsScreen = ({ navigation }) => {
   const [films, setFilms] = useState([]);
   const [loading, setLoading] = useState(true);
-
+// Uses the API instead of a hard-coded flatlist.
   useEffect(() => {
     const fetchFilms = async () => {
       try {
