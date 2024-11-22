@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Text, SafeAreaView, ActivityIndicator, StyleSheet, TextInput, Button, Modal, View } from 'react-native';
+import { Text, SafeAreaView, ActivityIndicator, StyleSheet, TextInput, Button, Modal, View, Image } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { Swipeable } from 'react-native-gesture-handler';
 import axios from 'axios';
@@ -59,6 +59,10 @@ const SpaceshipsScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Image
+        style={styles.image}
+        source={{ uri: 'https://logos-world.net/wp-content/uploads/2020/11/Star-Wars-Logo-1977.png' }} // Star Wars Logo
+      />
       <Text style={styles.title}>Spaceships</Text>
 
       <TextInput
@@ -150,6 +154,12 @@ const styles = StyleSheet.create({
   modalText: {
     fontSize: 18,
     marginBottom: 10,
+  },
+  image: {
+    width: '100%',
+    height: 200,
+    resizeMode: 'cover',
+    marginBottom: 16,
   },
 });
 

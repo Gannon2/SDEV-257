@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Text, SafeAreaView, Button, StyleSheet, Platform, ScrollView} from 'react-native';
+import { Text, SafeAreaView, Button, StyleSheet, Platform, ScrollView, Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
@@ -18,6 +18,10 @@ const Tab = createBottomTabNavigator();
 const HomeScreen = ({navigation}) => (
   <SafeAreaView style={styles.container}>
     <ScrollView style={styles.scroll}>
+     <Image
+        style={styles.image}
+        source={{ uri: 'https://logos-world.net/wp-content/uploads/2020/11/Star-Wars-Logo-1977.png' }} // Star Wars Logo
+      />
       <Text style={styles.text}>This app was created by Gannon Stephens</Text>
       <Button
         title="Go To Planets"
@@ -84,5 +88,11 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     marginBottom: 10,
+  },
+  image: {
+    width: '100%',
+    height: 200,
+    resizeMode: 'cover',
+    marginBottom: 16,
   },
 });
