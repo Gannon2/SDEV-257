@@ -8,7 +8,7 @@ const ServersScreen = ({ favorites, updateFavorites }) => {
   const [servers, setServers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
-
+  // fetches the API from the link.
   useEffect(() => {
     const fetchServers = async () => {
       try {
